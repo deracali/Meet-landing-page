@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --width-percent: 100%;
+  --max-width-medium: 500px;
+  --color-teal: hsl(192, 37%, 48%);
+  --color-white: #fff;
+  --color-purple: hsl(268, 34%, 53%);
+  --color-sky-blue: hsl(192, 90%, 77%);
+  --color-lavender: hsl(268, 100%, 86%);
+  --color-black: hsl(240, 21%, 20%);
+  --color-gray: hsl(240, 10%, 57%);
+  --color-white: hsl(0, 0%, 98%);
+  --color-button-hover-primary: hsl(192, 54%, 64%);
+  --color-button-hover-secondary: hsl(267, 64%, 71%);
+  --color-light-gray: rgb(216, 216, 216);
+  --size-medium: 50px;
+
+  --fs-font: 50px;
+  --fs-large: 40px;
+  --fs-medium: 25px;
+  --fs-samll: 20px;
+}
+
+body {
+  width: var(--width-percent);
+  max-width: 1440px;
+  margin: 100px auto 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  display: grid;
+  place-content: center;
+  margin-bottom: var(--size-medium);
+}
+
+.hero-container {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: var(--size-medium);
+}
+
+.img-left,
+.img-right {
+  flex-basis: 30%;
+}
+
+.hero-text-content {
+  width: var(--width-percent);
+  max-width: var(--max-width-medium);
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: var(--fs-large);
+  margin-bottom: 2rem;
+  color: var(--color-black);
+}
+
+.hero-section p {
+  font-size: var(--fs-samll);
+  margin-bottom: 2rem;
+  color: var(--color-gray);
+}
+
+.navigators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-section a {
+  padding: 0.85rem 1.75rem;
+  background-color: black;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.hero-section .link-download {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.hero-section .link-download:hover {
+  background-color: var(--color-button-hover-primary);
+}
+
+.hero-section .link-what {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.hero-section .link-what:hover {
+  background-color: var(--color-button-hover-secondary);
+}
+
+.number-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  margin-bottom: -28px;
+}
+
+.section-line {
+  width: 56px;
+  height: 84px;
+  border-left: 1px solid var(--color-light-gray);
+  transform: translateX(50%);
+}
+
+.section-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.section-no {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--color-gray);
+}
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--size-medium);
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 70px 0;
+}
+
+.features-section img {
+  width: var(--width-percent);
+  max-width: 250px;
+  border-radius: 20px;
+}
+
+.features-text {
+  text-align: center;
+  width: var(--width-percent);
+  max-width: 600px;
+}
+
+.features-section h3 {
+  margin-bottom: 1.4rem;
+  font-size: var(--fs-medium);
+  color: var(--color-teal);
+}
+
+.features-section .sub-heading {
+  margin-bottom: 1.4rem;
+  font-size: var(--fs-font);
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.features-section .text {
+  width: var(--width-percent);
+  max-width: var(--max-width-medium);
+  line-height: 1.6;
+  color: var(--color-gray);
+  display: grid;
+  transform: translateX(50px);
+}
+
+footer {
+  background: url(/images/image-footer.jpg) no-repeat center center/cover;
+  height: 300px;
+  display: grid;
+  place-content: center;
+}
+
+footer::before {
+  content: "";
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.9;
+  background-color: var(--color-teal);
+}
+
+.footer-container {
+  color: var(--color-white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 154px;
+}
+
+.footer-heading {
+  font-size: var(--fs-font);
+}
+
+.footer-text {
+  width: var(--width-percent);
+  max-width: 374px;
+  font-size: var(--fs-samll);
+  line-height: 1.5;
+  color: var(--color-light-gray);
+}
+
+.footer-download {
+  padding: 0.85rem 1.75rem;
+  background-color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+}
+
+.footer-download:hover {
+  background-color: var(--color-button-hover-secondary);
+}
