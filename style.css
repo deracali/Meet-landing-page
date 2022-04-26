@@ -22,7 +22,7 @@
   --color-light-gray: rgb(216, 216, 216);
   --size-medium: 50px;
 
-  --fs-font: 50px;
+  --fs-font: 45px;
   --fs-large: 40px;
   --fs-medium: 25px;
   --fs-samll: 20px;
@@ -52,6 +52,10 @@ body {
 .img-left,
 .img-right {
   flex-basis: 30%;
+}
+
+.responsive {
+  display: none;
 }
 
 .hero-text-content {
@@ -235,4 +239,129 @@ footer::before {
 
 .footer-download:hover {
   background-color: var(--color-button-hover-secondary);
+}
+
+@media (max-width: 1169px) {
+  .hero-section h1 {
+    font-size: 35px;
+  }
+  .hero-section a {
+    padding: 0.85rem 0.75rem;
+  }
+
+  .footer-container {
+    gap: 100px;
+  }
+
+  .footer-heading {
+    font-size: 39px;
+  }
+}
+
+@media (max-width: 1137px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .img-box-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-left: 4%;
+  }
+
+  .img-right {
+    display: none;
+  }
+  .responsive {
+    display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .features-container {
+    gap: 12px;
+  }
+  .footer-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1004px) {
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 921px) {
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 59px;
+    width: 67%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-text {
+    max-width: 318px;
+  }
+}
+
+@media (max-width: 864px) {
+  .img-left,
+  .responsive {
+    width: 40%;
+  }
+  .footer-text {
+    max-width: 287px;
+  }
+}
+
+@media (max-width: 832px) {
+  .features-container {
+    width: 100%;
+  }
+
+  footer {
+    height: 500px;
+  }
+
+  footer::before {
+    content: "";
+    height: 500px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    margin-top: 99px;
+  }
+}
+
+@media (max-width: 540px) {
+  .features-section .text {
+    max-width: 425px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section .sub-heading {
+    font-size: 35px;
+  }
+
+  .features-section .text {
+    max-width: 382px;
+    transform: translateX(24px);
+  }
+}
+
+@media (max-width: 408px) {
+  .features-section .text {
+    max-width: 298px;
+    font-size: 1rem;
+  }
 }
